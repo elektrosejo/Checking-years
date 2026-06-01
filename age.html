@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="card">
+        <h2>Checking years!<br>Provera godina! </h2>
+        <input type="number" id="years"><br>
+        How old are you, enter here?<br>
+        Unesi koliko imaš godina?<br> <br> <br>
+
+        CHECK YOUR STATUS!<br>PROVERI SVOJ STATUS! <br>
+        <button onclick="check()">CHECK/PROVERI</button>
+        <p id="demo"></p>
+        
+
+    </div>
+    <script>
+        function check()
+        {
+            let age=Number(document.getElementById('years').value) ;
+            let text="";
+            if(age>=18)
+            {
+                if(age>=65){
+                    text="You are retired! Ti si u penziji!<br> You have  "+ age + " years! Imaš  "+age+" godina! <br><br> BE HEALTHY! 🧓💪 ZDRAVO BIO!🧓💪";
+                }
+                else{
+                    text="You are adult! Punoletan si!";
+                    text="You are adult! Punoletan si!<br> You have  "+ age + " years! Imaš  "+age+" godina!<br><br> YOUR WORKING LIFE IS IN FRONT OF YOU! GOOD LUCK!👍👍👍<br> RADNI VEK JE PRED TOBOM! SREĆNO!👍👍👍" ;
+
+                }
+            }
+            else{
+                text="You are underage! Maloletan si!<br> You have only "+ age + " years! Imaš samo "+age+" godina!<br><br> LIFE IS IN FRONT OF YOU! 💪👍👌<br> ŽIVOT JE PRED TOBOM!💪👍👌" ;
+            }
+            document.getElementById('demo').innerHTML=text;
+
+        }        
+    </script>
+    
+    
+</body>
+</html>
